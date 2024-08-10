@@ -1,1 +1,42 @@
 /* ini css */
+.main-tittle {
+  text-align: center;
+}
+
+main {
+  display: flex;
+}
+
+form {
+  padding: 12px;
+  background-color: rgb(202, 246, 252);
+}
+
+aside {
+  padding: 48px;
+}
+
+.button1 {
+  height: 25px;
+
+  border: none;
+  border-radius: 4px;
+}
+
+.form-btn-container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.bg-consilk {
+  background-color: darkturquoise;
+}
+
+.bg-reset {
+  background-color: rgb(218, 62, 62);
+  color: white;
+}
+
+footer {
+  text-align: center;
+}
