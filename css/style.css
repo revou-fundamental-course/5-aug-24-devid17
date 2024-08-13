@@ -1,4 +1,5 @@
-/* ini css */
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap");
+
 :root {
   --underweight: orange;
   --normal: green;
@@ -6,42 +7,83 @@
   --obese: crimson;
 }
 
-.main-tittle {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Jost", sans-serif;
 }
 
-main {
-  display: flex;
+body {
+  background: #d3f6f6;
+  display: grid;
+  place-items: left;
+  height: 100vh;
 }
-
-form {
-  padding: 12px;
-  background-color: rgb(202, 246, 252);
-}
-
 aside {
   padding: 48px;
 }
 
-.button1 {
-  height: 25px;
+h1 {
+  text-align: center;
+}
 
+.container {
+  width: 90%;
+  max-width: 420px;
+  background: #44ceea;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25);
+  display: grid;
+  gap: 1rem;
+}
+
+.calculator {
+  display: grid;
+  gap: 1rem;
+}
+
+.calculator div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.calculator label {
+  flex: 0 1 120px;
+  font-weight: 600;
+}
+
+.calculator input {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  outline-color: #555;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.calculator button {
+  width: 50%;
+  border-radius: 5px;
   border: none;
-  border-radius: 4px;
+  cursor: pointer;
+  padding: 10px;
+  background: #dfee31;
+  color: #080808;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.form-btn-container {
-  margin-top: 10px;
-  margin-bottom: 10px;
+.calculator button[type="reset"] {
+  background: #f60101;
+  color: #ffffff;
 }
 
-.bg-consilk {
-  background-color: darkturquoise;
-}
-
-.bg-reset {
-  background-color: rgb(218, 62, 62);
-  color: white;
+.calculator button:hover {
+  filter: brightness(120%);
 }
 
 .output {
@@ -71,6 +113,22 @@ aside {
 .bmi-scale h4 {
   font-size: 0.75rem;
   color: slategray;
+}
+
+.underweight {
+  color: var(--underweight);
+}
+
+.healthy {
+  color: var(--normal);
+}
+
+.overweight {
+  color: var(--overweight);
+}
+
+.obese {
+  color: var(--obese);
 }
 
 footer {

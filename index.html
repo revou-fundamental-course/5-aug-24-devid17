@@ -3,102 +3,90 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>BMI Calculator</title>
     <link rel="stylesheet" href="css\style.css" />
+    <script src="js\script.js" defer></script>
   </head>
-
   <body>
-    <header>
-      <h1 class="main-tittle">kalkulator BMI</h1>
-    </header>
-
     <main>
-      <aside>
+    <aside>
+      <h1>BMI Calculator</h1>
+
+      <form class="calculator">
         <article>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-            type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
-            Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            Body Mass Index (BMI) adalah metode hitung-hitungan mudah yang dapat memberikan informasi dasar terhadap masalah berat badan Anda secara keseluruhan. Angka ini bisa berperan sebagai tanda peringatan bahaya dan melindungi
+            seseorang dari kematian akibat penyakit kronis terkait obesitas. Gunakan kalkulator kami untuk mengetahui masalah berat badan Anda. Perlu dicatat bahwa kalkulator ini tidak menghitung massa otot.
           </p>
         </article>
 
-        <form>
-          <div>
-            <h3>Jenis Kelamin</h3>
-            <input type="radio" id="Laki-laki" name="jenis-kelamin" value="laki-laki" /><label for="html">Laki-laki</label> <input type="radio" id="Perempuan" name="jenis-kelamin" value="Perepmpuan" /><label for="html">Perempuan</label>
-          </div>
+        <div>
+          <h3>Jenis Kelamin</h3>
+          <input type="radio" id="Laki-laki" name="jenis-kelamin" value="laki-laki" /><label for="Laki-laki">Laki-laki</label> <input type="radio" id="Perempuan" name="jenis-kelamin" value="Perempuan" /><label for="Perempuan"
+            >Perempuan</label
+          >
+        </div>
 
-          <div>
-            <h3>Berat Badan</h3>
-            <input type="number" />
-          </div>
-          <div>
-            <h3>Usia</h3>
-            <input type="number" />
-          </div>
-          <div>
-            <h3>Tinggi Badan</h3>
-            <input type="number" />
-          </div>
+        <div>
+          <label for="age">Umur</label>
+          <input type="number" id="age" min="0" step="0.01" value="" />
+        </div>
 
-          <div class="form-btn-container">
-            <button class="button1 bg-consilk">Hitung BMI</button>
-            <button class="button1 bg-reset">Reset</button>
-          </div>
-        </form>
+        <div>
+          <label for="weight">Berat Badan (kg)</label>
+          <input type="number" id="weight" min="0" step="0.01" value="" />
+        </div>
 
-        <article>
-          <header>
-            <h2>Keterangan Informasi</h2>
-          </header>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-            type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
-            Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-          </p>
-        </article>
-      </aside>
+        <div>
+          <label for="height">Tinggi badan (cm)</label>
+          <input type="number" id="height" min="0" step="0.01" value="" />
+        </div>
 
-      <aside>
-        <section>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-            type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
-            Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-          </p>
-        </section>
-        <section class="output">
-          <h3>Hasil BMI Kamu Adalah</h3>
-          <p id="bmi">0</p>
-          <p id="des">N/A</p>
-        </section>
+        <div>
+          <button type="reset">Reset</button>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </aside>
+    <aside>
+      
+      <section class="output">
+        <h3>BMI Kamu Adalah</h3>
+        <p id="bmi">0</p>
+        <p id="desc">N/A</p>
+      </section>
 
-        <section class="bmi-scale">
-          <div style="--color: var(--underweight)">
-            <h4>underweight</h4>
-            <p>&lt; 18.5</p>
-          </div>
+      <section class="bmi-scale">
+        <div style="--color: var(--underweight)">
+          <h4>Underweight</h4>
+          <p>&lt; 18.5</p>
+        </div>
 
-          <div style="--color: var(--normal)">
-            <h4>normal</h4>
-            <p>18.5 - 25</p>
-          </div>
+        <div style="--color: var(--normal)">
+          <h4>Normal</h4>
+          <p>18.5 – 25</p>
+        </div>
 
-          <div style="--color: var(--overweight)">
-            <h4>overweight</h4>
-            <p>25 - 30</p>
-          </div>
+        <div style="--color: var(--overweight)">
+          <h4>Overweight</h4>
+          <p>25 – 30</p>
+        </div>
 
-          <div style="--color: var(--obese)">
-            <h4>obese</h4>
-            <p>>30</p>
-          </div>
-        </section>
-      </aside>
-    </main>
-
-    <footer>
-      <p>Devid Prasetio</p>
-    </footer>
+        <div style="--color: var(--obese)">
+          <h4>Obese</h4>
+          <p>≥ 30</p>
+        </div>
+      </section>
+    </div>
+    <p>
+      Menjaga berat badan ideal sebenarnya cukup penting untuk dilakukan, karena dapat membantu Anda mencegah dan mengendalikan serangan penyakit atau kondisi tertentu.Selain itu, bila memiliki berat badan ideal, tentu akan membuat
+      Anda lebih nyaman dan lebih banyak energi untuk menjalani kegiatan sehari-hari. Sebaliknya, jika berat badan berlebih atau terlalu kurus, maka akan membuat Anda lebih mudah merasa lelah dan imun melemah. Namun, hal ini juga
+      tergantung dari pola hidup masing-masing. Lantas, apakah cara menghitung BMI bisa menjadi tolak ukur yang efektif untuk mengetahui ideal atau tidaknya berat badan seseorang? Melalui BMI, Anda bisa mengetahui berat badan ideal.
+      Namun, sebenarnya cara ini juga tidak bisa dikatakan akurat. Karena, metode perhitungan ini hanya menyertakan berat badan dan tinggi badan, tanpa mengikutsertakan usia, massa otot, jenis kelamin, dan lemak tubuh. Sehingga, cara
+      menghitung Body Mass Index ini tidak akan efektif bila diterapkan pada ibu hamil atau atlet.
+    </p>
+  </aside>
+</main>
+<footer>Made By Devid Prasetio</footer>
   </body>
 </html>
